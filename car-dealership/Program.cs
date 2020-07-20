@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Models;
+using Dealership.Models;
 
-namespace Dealership.Models {
+namespace Dealership {
     public class Program {
         public static void Main () {
             Car volkswagen = new Car ("1974 Volkswagen Thing", 1100, 368792);
