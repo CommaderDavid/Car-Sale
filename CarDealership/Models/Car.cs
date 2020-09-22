@@ -1,8 +1,10 @@
 using System;
 
-namespace CarDealership.Models {
+namespace CarDealership.Models 
+{
 
-    public class Car {
+    public class Car 
+    {
         // Public properties
 
         public string MakeModel { get; set; }
