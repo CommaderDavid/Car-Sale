@@ -1,6 +1,6 @@
 using System;
 
-namespace Dealership.Models {
+namespace CarDealership.Models {
 
     public class Car {
         // Public properties
