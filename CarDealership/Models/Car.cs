@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace CarDealership.Models 
 {
@@ -10,6 +11,13 @@ namespace CarDealership.Models
         public string MakeModel { get; set; }
         public int Price { get; set; }
         public int Miles { get; set; }
+        
+        static Car volkswagen = new Car("1974 Volkswagen Thing", 1100, 368792);
+        static Car yugo = new Car("1980 Yugo Koral", 700, 56000);
+        static Car ford = new Car("1988 Ford Country Squire", 1400, 239001);
+        static Car amc = new Car("1976 AMC Pacer", 400, 198000);
+
+        private static List<Car> _instances = new List<Car>() { volkswagen, yugo, ford, amc };
 
         // Constructor
 
@@ -18,15 +26,12 @@ namespace CarDealership.Models
             MakeModel = makeModel;
             Price = price;
             Miles = miles;
+            _instances.Add (this);
         }
 
-        public bool WorthBuying (int maxPrice) {
-            return (Price < maxPrice);
-        }
-
-        public static string MakeSound(string sound)
+        public static List<Car> GetAll()
         {
-            return "Our cars sound like " + sound;
+            return _instances;
         }
     }
     
