@@ -3,5 +3,14 @@
 <h1>Cars for Sale:</h1>
 
 <ul>
-    <li></li>
+    @foreach (Car car in Model)
+    {    
+        <li>@car.MakeModel</li>
+            <ol>
+                <li>@car.Price</li>
+                <li>@car.Miles</li>
+            </ol>
+    }
 </ul>
+
+<a href="/cars/new">Add a new car.</a>
